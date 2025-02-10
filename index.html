@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic, Comparison, and Logical Operators</title>
+
+    <!-- Link to the External CSS File -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS Link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Arithmetic, Comparison, and Logical Operators</h1>
+        
+        <p>Click the buttons below to perform different operations using JavaScript operators:</p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-custom btn-block" onclick="performArithmetic()">Perform Arithmetic</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-custom btn-block" onclick="performComparison()">Perform Comparison</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-custom btn-block" onclick="performLogical()">Perform Logical</button>
+            </div>
+        </div>
+
+        <div class="output text-center">
+            <h3 id="result"></h3>
+        </div>
+
+        <!-- Refresh Button -->
+        <div class="text-center">
+            <button id="refreshBtn" onclick="refreshPage()">Refresh Page</button>
+        </div>
+
+        <!-- Information Links -->
+        <p>Learn more about JavaScript and operators on <a href="https://www.w3schools.com" target="_blank">W3Schools</a>.</p>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+        // JavaScript Variables
+        let a = 10;
+        let b = 5;
+
+        // Function for Arithmetic Operators
+        function performArithmetic() {
+            // Performing arithmetic operations
+            let result = "Arithmetic Operations: <br>";
+            result += "Addition: " + (a + b) + "<br>";
+            result += "Subtraction: " + (a - b) + "<br>";
+            result += "Multiplication: " + (a * b) + "<br>";
+            result += "Division: " + (a / b) + "<br>";
+            document.getElementById('result').innerHTML = result;
+        }
+
+        // Function for Comparison Operators
+        function performComparison() {
+            // Performing comparison operations
+            let result = "Comparison Operations: <br>";
+            result += "Equal to (a == b): " + (a == b) + "<br>";
+            result += "Not equal to (a != b): " + (a != b) + "<br>";
+            result += "Greater than (a > b): " + (a > b) + "<br>";
+            result += "Less than (a < b): " + (a < b) + "<br>";
+            document.getElementById('result').innerHTML = result;
+        }
+
+        // Function for Logical Operators
+        function performLogical() {
+            // Performing logical operations
+            let result = "Logical Operations: <br>";
+            result += "AND (a > b && b < a): " + (a > b && b < a) + "<br>";
+            result += "OR (a > b || a == b): " + (a > b || a == b) + "<br>";
+            result += "NOT (!(a > b)): " + !(a > b) + "<br>";
+            document.getElementById('result').innerHTML = result;
+        }
+
+        // Function to Refresh the Page
+        function refreshPage() {
+            location.reload();  // Reloads the page when called
+        }
+    </script>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
